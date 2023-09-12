@@ -2,6 +2,8 @@
 * {
   margin: 0;
   padding: 0;
+  border: none;
+  outline: none;
 }
 
 /* Apply basic styling */
@@ -17,7 +19,8 @@ header {
 }
 
 header img {
-  display: none;
+  max-width: 200px; /* Adjust the maximum logo width as needed */
+  height: auto;
 }
 
 .content {
@@ -25,29 +28,92 @@ header img {
   margin: 20px auto;
   padding: 20px;
   background-color: #ffffff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 }
 
 h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 p {
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #666;
 }
 
-/* Add responsive styles */
+form {
+  margin-top: 20px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Add responsive styles for screens larger than or equal to 768px */
 @media screen and (min-width: 768px) {
-  .content {
-    padding: 10px;
-    background-color: #007bff;
+  header {
+    padding: 15px;
   }
 
   header img {
-    display: inline;
-    max-width: 100%;
-    height: auto;
+    max-width: 150px;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+/* Add responsive styles for screens larger than or equal to 1080px */
+@media screen and (min-width: 1080px) {
+  header img {
+    max-width: 200px;
+  }
+
+  h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 20px;
   }
 }
